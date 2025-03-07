@@ -11,7 +11,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
-import static java.nio.channels.Selector.open;
+
 
 public class TestBase {
 
@@ -33,7 +33,7 @@ public class TestBase {
         String sessionId = Selenide.sessionId().toString();
         System.out.println(sessionId);
 
-//        Attach.screenshotAs("Last screenshot"); // todo fix
+       Attach.screenshotAs("Last screenshot"); // todo fix
         Attach.pageSource();
         closeWebDriver();
         Attach.addVideo(sessionId);
