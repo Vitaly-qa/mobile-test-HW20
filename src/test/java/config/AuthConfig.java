@@ -9,7 +9,7 @@ import org.aeonbits.owner.Config;
         @Key("username")
         String username();
 
-       @Key("password")
-       String password();
+        @Key("password")
+        String password();
     }
 
