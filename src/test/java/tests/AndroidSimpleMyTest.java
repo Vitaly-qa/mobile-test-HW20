@@ -22,7 +22,7 @@ public class AndroidSimpleMyTest extends TestBase {
     }
 
     @Test
-    @DisplayName("Тест на проверку статьи")
+    @DisplayName("Тест на проверку статьи Honda")
     void articleVerificationTest() {
         step("Поиск статьи по заданному запросу Honda", () -> {
             $(accessibilityId("Search Wikipedia")).click();
