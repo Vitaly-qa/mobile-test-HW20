@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.appium.java_client.AppiumBy.*;
 import static io.qameta.allure.Allure.step;
 
-public class CheckingForWikipediaArticleSearchTest extends TestBase {
+public class ArticleSearchTest extends TestBase {
 
     @Test
     @DisplayName("Тест на проверку статьи")
