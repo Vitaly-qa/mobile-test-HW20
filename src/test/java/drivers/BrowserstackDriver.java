@@ -21,8 +21,8 @@ public class BrowserstackDriver implements WebDriverProvider {
             MutableCapabilities caps = new MutableCapabilities();
 
             // Set your access credentials
-            caps.setCapability("browserstack.user", config.browserstackUser());
-            caps.setCapability("browserstack.key", config.browserstackKey());
+            caps.setCapability("browserstack.user", authConfig.username());
+            caps.setCapability("browserstack.key", authConfig.password());
 
             // Set URL of the application under test
             caps.setCapability("app", config.app());
