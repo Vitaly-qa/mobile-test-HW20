@@ -5,11 +5,11 @@ import org.aeonbits.owner.Config;
 @Config.Sources({"classpath:${deviceHost}.properties"})
 public interface DeviceConfig extends Config {
     @Key("deviceModel")
-    @DefaultValue("Google Pixel 4")
+    @DefaultValue("Galaxy A71")
     String getDeviceModel();
 
     @Key("systemVersion")
-    @DefaultValue("11.0")
+    @DefaultValue("13")
     String getSystemVersion();
 
     @Key("appVersion")
