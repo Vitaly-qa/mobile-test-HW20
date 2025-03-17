@@ -24,6 +24,7 @@ public class ArticleSearchTest extends TestBase {
     @Test
     @DisplayName("Тест на проверку статьи Honda")
     void articleVerificationTest() {
+        back();
         step("Поиск статьи по заданному запросу Honda", () -> {
             $(accessibilityId("Search Wikipedia")).click();
             $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Honda");
