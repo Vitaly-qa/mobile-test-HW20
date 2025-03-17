@@ -12,18 +12,6 @@ import static io.qameta.allure.Allure.step;
 public class ArticleSearchTest extends TestBase {
 
     @Test
-    @DisplayName("Тест на проверку статьи")
-    void successfulSearchTest() {
-        step("Поиск статей по заданному запросу", () -> {
-            $(accessibilityId("Search Wikipedia")).click();
-            $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
-        });
-        step("Проверка, что перечень статей не пустой", () ->
-                $$(id("org.wikipedia.alpha:id/page_list_item_title"))
-                        .shouldHave(sizeGreaterThan(0)));
-    }
-
-    @Test
     @Tag("android")
     @DisplayName("Successful search")
     void successfulSearchTests() {
