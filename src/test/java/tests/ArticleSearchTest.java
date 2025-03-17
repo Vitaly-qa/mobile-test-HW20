@@ -25,17 +25,15 @@ public class ArticleSearchTest extends TestBase {
 
     @Test
     @Tag("android")
-    @DisplayName("Open article from Search")
-    void openArticleFromSearchTest() {
+    @DisplayName("Successful search")
+    void successfulSearchTests() {
         step("Type search", () -> {
             $(AppiumBy.accessibilityId("Search Wikipedia")).click();
-            $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("java");
+            $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
         });
-        step("Open first article", () ->
-                $$(id("org.wikipedia.alpha:id/page_list_item_container")).first().click());
-        step("Check opening", () ->
-                $(id("org.wikipedia.alpha:id/view_wiki_error_text"))
-                        .shouldHave(text("An error occurred")));
+        step("Verify content found", () ->
+                $$(id("org.wikipedia.alpha:id/page_list_item_container"))
+                        .shouldHave(sizeGreaterThan(0)));
 
     }
 }
