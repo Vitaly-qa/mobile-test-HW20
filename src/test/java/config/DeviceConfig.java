@@ -2,15 +2,25 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources({
-        "classpath:${platform}.properties"
-})
+@Config.Sources({"classpath:${deviceHost}.properties"})
 public interface DeviceConfig extends Config {
+    @Key("deviceModel")
+    @DefaultValue("Google Pixel 4")
+    String getDeviceModel();
 
-    String device();
+    @Key("systemVersion")
+    @DefaultValue("11.0")
+    String getSystemVersion();
 
-    String version();
+    @Key("appVersion")
+    String getAppVersion();
 
-    String deviceUrl();
+    @Key("appUrl")
+    String getAppUrl();
 
+    @Key("appPackage")
+    String getAppPackage();
+
+    @Key("appActivity")
+    String getAppActivity();
 }
